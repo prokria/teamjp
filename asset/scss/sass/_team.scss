@@ -1,0 +1,84 @@
+.team{
+    padding: 40px 0px;
+    h2{
+        @include heading1;
+    }
+    .card{
+        border-radius: 17px;
+        overflow: hidden;
+        transition: all linear 2s;
+        .card_heading{
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            .overlay{
+                position: absolute;
+                top: 0;
+                right: -100%;
+                background: #00000070;
+                height: 100%;
+                width: 100px;
+                transition: all linear 0.5s;
+                .social_media{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    li{
+                        background-color: transparent;
+                        border: 1px solid #fff;
+                        padding: 0;
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: all linear 0.3s;
+                        cursor: pointer;
+                        a{
+                            font-size: 30px;
+                            line-height: 0;
+                            color: #fff;
+                            cursor: pointer;
+                            i{
+                                cursor: pointer;
+                            }
+                        }
+
+                        &:hover{
+                            background-color: #fff;
+                            a{
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .card_body{
+            padding: 20px;
+            h3{
+                font-size: 25px;
+                margin-top: 20px;
+                font-weight: 600;
+            }
+            h4{
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+
+        &:hover{
+            box-shadow: 1px 3px 30px #00000070;
+            .card_heading{
+                .overlay{
+                    right: 0;
+                }
+            }
+        }
+    }
+}

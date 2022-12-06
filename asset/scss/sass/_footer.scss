@@ -1,0 +1,35 @@
+.footer{
+    padding: 20px 0px;
+    .logo{
+        .imgbox{
+            width: 75%;
+        }
+    }
+
+    h2{
+        font-size: 25px;
+        font-weight: 600;
+    }
+    ul{
+        li{
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            cursor: pointer;
+            i{
+                margin-right: 5px;
+                cursor: pointer;
+            }
+            a{
+                cursor: pointer;
+                transition: all linear 0.3s;
+            }
+
+            &:hover{
+                a{
+                    letter-spacing: 4px;
+                }
+            }
+        }
+    }
+}

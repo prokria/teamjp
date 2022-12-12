@@ -8,7 +8,9 @@
 }
 
 @media only screen and (max-width: 1024px){
-
+    .section-slider {
+        height: 200px;
+    }
 }
 
 @media only screen and (max-width: 912px){
@@ -65,19 +67,22 @@
                 width: 100%;
             }
         }
+    }
+    .section-slider {
+        height: 140px;
     }    
 }
 
 @media only screen and (max-width: 414px){
-    .projects{
-        .card{
-            .card_body{
-                .modal_container {
-                  .modal-background {
-                    padding: 50px;
-                  }
-                }
+    .modal_section{
+        .modal_container {
+          .modal-background {
+            padding: 50px;
+            .modal {
+                height: 70vh;
+                padding: 10px;
             }
+          }
         }
     }
 }
@@ -103,15 +108,15 @@
 }
 
 @media only screen and (max-width: 280px){
-    .projects{
-        .card{
-            .card_body{
-                .modal_container {
-                  .modal-background {
-                    padding: 20px;
-                  }
-                }
+    .modal_section{
+        .modal_container {
+          .modal-background {
+            padding: 20px;
+            .modal {
+                height: 70vh;
+                padding: 10px;
             }
+          }
         }
     }
 }

@@ -23,6 +23,7 @@ body {
 }
 
 select,
+textarea,
 input,
 button:focus {
   outline: none;
@@ -195,127 +196,8 @@ a:hover {
   font-size: 25px;
   font-weight: 600;
 }
-.projects .card .card_body .modal_container {
-  position: fixed;
-  display: table;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  transform: scale(0);
-  z-index: 3;
-}
-.projects .card .card_body .modal_container.one {
-  transform: scaleY(0.01) scaleX(0);
-  -webkit-animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-          animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-.projects .card .card_body .modal_container.one .modal-background .modal {
-  transform: scale(0);
-  -webkit-animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-          animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-.projects .card .card_body .modal_container.one.out {
-  transform: scale(1);
-  -webkit-animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-          animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-.projects .card .card_body .modal_container.one.out .modal-background .modal {
-  -webkit-animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-          animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-.projects .card .card_body .modal_container .modal-background {
-  display: table-cell;
-  background: rgba(0, 0, 0, 0.8);
-  text-align: center;
-  vertical-align: middle;
-  padding: 100px;
-}
-.projects .card .card_body .modal_container .modal-background .modal {
-  width: 100%;
-  height: 70vh;
-  background: white;
-  padding: 10px;
-  display: inline-block;
-  border-radius: 3px;
-  font-weight: 300;
-  position: relative;
-}
-@-webkit-keyframes unfoldIn {
-  0% {
-    transform: scaleY(0.005) scaleX(0);
-  }
-  50% {
-    transform: scaleY(0.005) scaleX(1);
-  }
-  100% {
-    transform: scaleY(1) scaleX(1);
-  }
-}
-@keyframes unfoldIn {
-  0% {
-    transform: scaleY(0.005) scaleX(0);
-  }
-  50% {
-    transform: scaleY(0.005) scaleX(1);
-  }
-  100% {
-    transform: scaleY(1) scaleX(1);
-  }
-}
-@-webkit-keyframes unfoldOut {
-  0% {
-    transform: scaleY(1) scaleX(1);
-  }
-  50% {
-    transform: scaleY(0.005) scaleX(1);
-  }
-  100% {
-    transform: scaleY(0.005) scaleX(0);
-  }
-}
-@keyframes unfoldOut {
-  0% {
-    transform: scaleY(1) scaleX(1);
-  }
-  50% {
-    transform: scaleY(0.005) scaleX(1);
-  }
-  100% {
-    transform: scaleY(0.005) scaleX(0);
-  }
-}
-@-webkit-keyframes zoomIn {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes zoomIn {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@-webkit-keyframes zoomOut {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-@keyframes zoomOut {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
+.projects .card .card_body .imgbox {
+  height: 200px;
 }
 .projects .card .card_body .button_box {
   padding: 5px 10px;
@@ -405,6 +287,259 @@ a:hover {
   overflow: hidden;
 }
 
+.modal_section .modal_container {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 3;
+}
+.modal_section .modal_container.one {
+  transform: scaleY(0.01) scaleX(0);
+  -webkit-animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+          animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.modal_section .modal_container.one .modal-background .modal {
+  transform: scale(0);
+  -webkit-animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+          animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.modal_section .modal_container.one.out {
+  transform: scale(1);
+  -webkit-animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+          animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.modal_section .modal_container.one.out .modal-background .modal {
+  -webkit-animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+          animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.modal_section .modal_container .modal-background {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+  padding: 100px;
+}
+.modal_section .modal_container .modal-background .modal {
+  width: 100%;
+  height: 70vh;
+  background: white;
+  padding: 50px;
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: 300;
+  position: relative;
+}
+.modal_section .modal_container .modal-background .modal .close_btn {
+  height: 25px;
+  width: 50px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+.modal_section .modal_container .modal-background .modal .close_btn i {
+  cursor: pointer;
+}
+.modal_section .modal_container .modal-background .modal h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+.modal_section .modal_container .modal-background .modal p {
+  font-size: 17px;
+  font-weight: 400;
+}
+.modal_section .modal_container .modal-background .modal .imgbox {
+  border: 3px solid #000;
+}
+@-webkit-keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+@-webkit-keyframes unfoldOut {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+}
+@keyframes unfoldOut {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+}
+@-webkit-keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.section-slider {
+  max-width: 100%;
+  height: 300px;
+  border: 3px solid #000000;
+  position: relative;
+  overflow: hidden;
+}
+.section-slider .slide-items .item {
+  display: none;
+  position: relative;
+  overflow: hidden;
+}
+.section-slider .slide-items .item.active {
+  display: block;
+}
+.section-slider .slide-items .item img {
+  width: 100%;
+  display: block;
+}
+.section-slider .slide-items .item img.slide-left {
+  -webkit-animation: slide-left 1s ease;
+          animation: slide-left 1s ease;
+}
+.section-slider .slide-items .item img.slide-right {
+  -webkit-animation: slide-right 1s ease;
+          animation: slide-right 1s ease;
+}
+.section-slider .left-slide,
+.section-slider .right-slide {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #000000;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.section-slider .left-slide i,
+.section-slider .right-slide i {
+  cursor: pointer;
+}
+.section-slider .left-slide:hover,
+.section-slider .right-slide:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.section-slider .left-slide {
+  left: 30px;
+}
+.section-slider .right-slide {
+  right: 30px;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    transform: translate(100%, 0%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translate(100%, 0%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide-right {
+  0% {
+    transform: translate(-100%, 0%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+@keyframes slide-right {
+  0% {
+    transform: translate(-100%, 0%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
 .footer {
   padding: 20px 0px;
 }
@@ -415,24 +550,43 @@ a:hover {
   font-size: 25px;
   font-weight: 600;
 }
-.footer ul li {
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 15px;
-  cursor: pointer;
+.footer form {
+  width: 100%;
 }
-.footer ul li i {
-  margin-right: 5px;
-  cursor: pointer;
+.footer form input,
+.footer form textarea {
+  width: 100%;
+  padding: 5px 20px;
+  margin-bottom: 5px;
+  background-color: transparent;
+  border: 1.5px solid #000000;
+  border-radius: 0px;
+  color: #000000;
+  cursor: text;
 }
-.footer ul li a {
-  cursor: pointer;
+.footer form textarea {
+  height: 70px;
+}
+.footer form button {
+  padding: 5px 30px;
+  width: 100%;
+  border: 1.5px solid #000000;
+  background-color: transparent;
+  color: #000000;
+  font-weight: 600;
+  float: right;
   transition: all linear 0.3s;
 }
-.footer ul li:hover a {
-  letter-spacing: 4px;
+.footer form button:hover {
+  background-color: #000000;
+  color: #ffffff;
 }
 
+@media only screen and (max-width: 1024px) {
+  .section-slider {
+    height: 200px;
+  }
+}
 @media only screen and (max-width: 912px) {
   .team h2 {
     font-size: 50px;
@@ -468,14 +622,25 @@ a:hover {
   .footer .logo .imgbox {
     width: 100%;
   }
+  .section-slider {
+    height: 140px;
+  }
 }
 @media only screen and (max-width: 414px) {
-  .projects .card .card_body .modal_container .modal-background {
+  .modal_section .modal_container .modal-background {
     padding: 50px;
+  }
+  .modal_section .modal_container .modal-background .modal {
+    height: 70vh;
+    padding: 10px;
   }
 }
 @media only screen and (max-width: 280px) {
-  .projects .card .card_body .modal_container .modal-background {
+  .modal_section .modal_container .modal-background {
     padding: 20px;
+  }
+  .modal_section .modal_container .modal-background .modal {
+    height: 70vh;
+    padding: 10px;
   }
 }/*# sourceMappingURL=main.css.map */

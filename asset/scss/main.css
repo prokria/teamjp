@@ -23,6 +23,7 @@ body {
 }
 
 select,
+textarea,
 input,
 button:focus {
   outline: none;
@@ -549,22 +550,36 @@ a:hover {
   font-size: 25px;
   font-weight: 600;
 }
-.footer ul li {
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 15px;
-  cursor: pointer;
+.footer form {
+  width: 100%;
 }
-.footer ul li i {
-  margin-right: 5px;
-  cursor: pointer;
+.footer form input,
+.footer form textarea {
+  width: 100%;
+  padding: 5px 20px;
+  margin-bottom: 5px;
+  background-color: transparent;
+  border: 1.5px solid #000000;
+  border-radius: 0px;
+  color: #000000;
+  cursor: text;
 }
-.footer ul li a {
-  cursor: pointer;
+.footer form textarea {
+  height: 70px;
+}
+.footer form button {
+  padding: 5px 30px;
+  width: 100%;
+  border: 1.5px solid #000000;
+  background-color: transparent;
+  color: #000000;
+  font-weight: 600;
+  float: right;
   transition: all linear 0.3s;
 }
-.footer ul li:hover a {
-  letter-spacing: 4px;
+.footer form button:hover {
+  background-color: #000000;
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 1024px) {

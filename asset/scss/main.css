@@ -8,6 +8,33 @@
   width: 100%;
 }
 
+.toast_msg_box {
+  width: 300px;
+  height: 60px;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 30px;
+  right: -330px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all linear 0.5s;
+}
+.toast_msg_box span {
+  font-size: 30px;
+  margin-right: 5px;
+}
+.toast_msg_box p {
+  margin-top: 13px;
+}
+
+.active_toast_box {
+  right: 30px;
+  opacity: 1;
+}
+
 * {
   cursor: default;
 }
@@ -559,24 +586,30 @@ a:hover {
   font-weight: 600;
   margin-top: 20px;
 }
-.footer form {
+.footer .form {
   width: 100%;
 }
-.footer form input,
-.footer form textarea {
+.footer .form input,
+.footer .form textarea {
   width: 100%;
   padding: 5px 20px;
-  margin-bottom: 5px;
   background-color: transparent;
   border: 1.5px solid #000000;
   border-radius: 0px;
   color: #000000;
   cursor: text;
 }
-.footer form textarea {
+.footer .form textarea {
   max-height: 70px;
 }
-.footer form button {
+.footer .form p {
+  font-size: 13px;
+  line-height: 1;
+  margin: 5px 0px;
+  color: red;
+  opacity: 0;
+}
+.footer .form button {
   padding: 5px 30px;
   width: 100%;
   border: 1.5px solid #000000;
@@ -585,9 +618,10 @@ a:hover {
   font-weight: 600;
   float: right;
   transition: all linear 0.3s;
+  margin-top: 5px;
   margin-bottom: 20px;
 }
-.footer form button:hover {
+.footer .form button:hover {
   background-color: #000000;
   color: #ffffff;
 }

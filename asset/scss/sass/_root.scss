@@ -30,3 +30,32 @@
         width: 100%;
     }
 }
+
+
+.toast_msg_box{
+  width: 300px;
+  height: 60px;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 30px;
+  right: -330px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all linear 0.5s;
+  span{
+    font-size: 30px;
+    margin-right: 5px;
+  }
+  p{
+    margin-top: 13px;
+  }
+}
+
+.active_toast_box{
+  right: 30px;
+  opacity: 1;
+}
+

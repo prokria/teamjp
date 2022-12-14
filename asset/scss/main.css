@@ -220,7 +220,7 @@ a:hover {
 }
 .projects .card .card_header h3 {
   text-align: center;
-  font-size: 25px;
+  font-size: 17px;
   font-weight: 600;
 }
 .projects .card .card_body .imgbox {
@@ -570,21 +570,37 @@ a:hover {
 .footer {
   padding: 60px 0px;
 }
-.footer .logo {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer .fotter_content {
+  margin-top: 35px;
 }
-.footer .logo .imgbox {
-  width: 40%;
+.footer .fotter_content .logo .imgbox {
+  cursor: pointer;
+  width: 30%;
   height: auto;
+}
+.footer .fotter_content .logo .imgbox img {
+  cursor: pointer;
+}
+.footer .fotter_content ul {
+  padding-top: 20px;
+}
+.footer .fotter_content ul li {
+  margin-bottom: 5px;
+}
+.footer .fotter_content ul li svg {
+  margin-right: 5px;
+  fill: #000000;
+}
+.footer .fotter_content ul li a {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer .fotter_content ul li a:hover {
+  color: #449aff;
 }
 .footer h2 {
   font-size: 25px;
   font-weight: 600;
-  margin-top: 20px;
 }
 .footer .form {
   width: 100%;
@@ -624,19 +640,6 @@ a:hover {
 .footer .form button:hover {
   background-color: #000000;
   color: #ffffff;
-}
-.footer ul {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.footer ul li a {
-  cursor: pointer;
-  transition: 0.3s;
-}
-.footer ul li a:hover {
-  color: #449aff;
 }
 
 @media only screen and (max-width: 1024px) {

@@ -27,22 +27,6 @@ function slider(slider){
         Slide("prev");
     })
 
-    setInterval(autoPlay, 10000);
-
-    function autoPlay(){
-        index++;
-        if(index == totalSlides){
-            index=0;
-        }
-        $('.img').removeClass('slide-right')
-        $('.img').addClass('slide-left')
-
-        for(i=0; i<slides.length; i++){
-            slides[i].classList.remove('active');
-        }
-        slides[index].classList.add('active');
-    }
-
     function Slide(direction){
 
         if(direction == "next"){

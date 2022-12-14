@@ -1,25 +1,44 @@
 .footer{
     padding: 60px 0px;
-    .logo{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .imgbox{
-            width: 40%;
-            height: auto;
+    .fotter_content{
+        margin-top: 35px;
+        .logo{
+            .imgbox{
+                cursor: pointer;
+                width: 30%;
+                height: auto;
+                img{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        ul{
+            padding-top: 20px;
+            li{
+                margin-bottom: 5px;
+                svg{
+                    margin-right: 5px;
+                    fill: #000000;
+                }
+                a{
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover{
+                        color: #449aff;
+                    }
+                }
+            }
         }
     }
 
     h2{
         font-size: 25px;
         font-weight: 600;
-        margin-top: 20px;
     }
     .form{
         width: 100%;
-
         input,
         textarea{
             width: 100%;
@@ -58,21 +77,5 @@
             }
         }
     }
-    ul{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        li{
-            a{
-                cursor: pointer;
-                transition: 0.3s;
-
-                &:hover{
-                    color: #449aff;
-                }
-            }
-        }
-    }
+    
 }
